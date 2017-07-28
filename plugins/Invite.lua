@@ -1,6 +1,6 @@
 -----my_name_is_MoHaMaMmAdRaSsOuL*#@RsEvEn
 -----@RsEvEn     FOR UPDATE
------ظ„ط·ظپط§ ظ¾غŒط§ظ… ط¨ط§ظ„ط§ ط±ظˆ ظ¾ط§ع© ظ†ع©ظ†غŒط¯
+-----لطفا پیام بالا رو پاک نکنید
 
 function resolve_username(username,cb)
   tdcli_function ({
@@ -65,4 +65,4 @@ run =run,}
 
 -----my_name_is_MoHaMaMmAdRaSsOuL*#@RsEvEn
 -----@RsEvEn     FOR UPDATE
------ظ„ط·ظپط§ ظ¾غŒط§ظ… ط¨ط§ظ„ط§ ط±ظˆ ظ¾ط§ع© ظ†ع©ظ†غŒط¯
+-----لطفا پیام بالا رو پاک نکنید
