@@ -25,10 +25,10 @@ install() {
 }
 
 function print_logo() {
-	yellow "         RsEvEn  MoHaMmAdRaSsOuL    RICH         RsEvEn"
-	yellow "         RsEvEn  MoHaMmAdRaSsOuL    RICH         RsEvEn"
-	yellow "         RsEvEn  MoHaMmAdRaSsOuL    RICH         RsEvEn"
-	yellow "         RsEvEn  MoHaMmAdRaSsOuL    RICH         RsEvEn"
+	green "         RsEvEn  MoHaMmAdRaSsOuL    RICH         RsEvEn"
+	green "         RsEvEn  MoHaMmAdRaSsOuL    RICH         RsEvEn"
+	green "         RsEvEn  MoHaMmAdRaSsOuL    RICH         RsEvEn"
+	green "         RsEvEn  MoHaMmAdRaSsOuL    RICH         RsEvEn"
 	echo -e "\n\e[0m"
 }
 
