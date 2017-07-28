@@ -21,24 +21,24 @@ install() {
 		cd ..
 		chmod +x bot
 		chmod +x tg
-		chmod +x autoenergy.sh
+		chmod +x autoRsEvEn.sh
 }
 
 function print_logo() {
-	green "         ENERGY  EHSAN    RICH         ENERGY"
-	green "         ENERGY  EHSAN    RICH         ENERGY"
-	green "         ENERGY  EHSAN    RICH         ENERGY"
-	green "         ENERGY  EHSAN    RICH         ENERGY"
+	yellow "         RsEvEn  MoHaMmAdRaSsOuL    RICH         RsEvEn"
+	yellow "         RsEvEn  MoHaMmAdRaSsOuL    RICH         RsEvEn"
+	yellow "         RsEvEn  MoHaMmAdRaSsOuL    RICH         RsEvEn"
+	yellow "         RsEvEn  MoHaMmAdRaSsOuL    RICH         RsEvEn"
 	echo -e "\n\e[0m"
 }
 
 function logo_play() {
     declare -A txtlogo
     seconds="0.010"
-    txtlogo[1]="ENERGY  EHSAN    RICH         ENERGY"
-    txtlogo[2]="ENERGY  EHSAN    RICH         ENERGY"
-    txtlogo[3]="ENERGY  EHSAN    RICH         ENERGY"
-    txtlogo[4]="ENERGY  EHSAN    RICH         ENERGY"
+    txtlogo[1]="RsEvEn  MoHaMmAdRaSsOuL    RICH         RsEvEn"
+    txtlogo[2]="RsEvEn  MoHaMmAdRaSsOuL    RICH         RsEvEn"
+    txtlogo[3]="RsEvEn  MoHaMmAdRaSsOuL    RICH         RsEvEn"
+    txtlogo[4]="RsEvEn  MoHaMmAdRaSsOuL    RICH         RsEvEn"
     printf "\e[31m\t"
     for i in ${!txtlogo[@]}; do
         for x in `seq 0 ${#txtlogo[$i]}`; do
@@ -51,14 +51,14 @@ function logo_play() {
 	echo -e "\e[0m"
 }
 
-function energy_team() {
+function RsEvEn_team() {
 	echo -e "\e[0m"
-	green "     >>>>                       edir 4 source                                               "
-	green "     >>>>                       beyond.bombang and...                                       "
-	white "     >>>>                       edited by ehsan mafia_boy   @mafia_boy                      "
-	white "     >>>>                       @RICH_ENERGY                                                "
-	red   "     >>>>                       @ENERGY_TEAM                                                "
-	red   "     >>>>                       ENERGY_BOT                                                  "
+	green "     >>>>                       edir 4 source                                          "
+	green "     >>>>                       beyond.bombang and...                                  "
+	white "     >>>>                       edited by ehsan mafia_boy   @RsEvEn                    "
+	white "     >>>>                       @RsEvEn                                                "
+	red   "     >>>>                       @RsEvEn                                                "
+	red   "     >>>>                       RsEvEn_BOT                                             "
 	echo -e "\e[0m"
 }
 
@@ -77,7 +77,7 @@ update() {
 
 if [ "$1" = "install" ]; then
 	print_logo
-	energy_team
+	RsEvEn_team
 	logo_play
 	install
   else
@@ -87,7 +87,7 @@ if [ ! -f ./tg/tgcli ]; then
     exit 1
  fi
 	print_logo
-	energy_team
+	RsEvEn_team
 	logo_play
    #sudo service redis-server restart
    ./tg/tgcli -s ./bot/bot.lua -l 1 -E $@
