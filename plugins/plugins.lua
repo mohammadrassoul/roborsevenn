@@ -1,5 +1,5 @@
 do
--- #Begin plugins.lua by @RICHENERGY
+-- #Begin plugins.lua by @RsEvEn
 -- Returns the key (index) in the config.enabled_plugins table
 local function plugin_enabled( name )
   for k,v in pairs(_config.enabled_plugins) do
@@ -250,6 +250,7 @@ return {
 
 end
 
------my_name_is_ehsan*#@mafia_boy
------@ENERGY_TEAM     FOR UPDATE
+-----my_name_is_MoHaMmAdRaSsOuL*#@RsEvEn
+-----@RsEvEn     FOR UPDATE
 -----لطفا پیام بالا رو پاک نکنید
+
