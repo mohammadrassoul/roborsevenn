@@ -21,7 +21,7 @@ install() {
 		cd ..
 		chmod +x bot
 		chmod +x tg
-		chmod +x autoRsEvEn.sh
+		chmod +x autoenergy.sh
 }
 
 function print_logo() {
