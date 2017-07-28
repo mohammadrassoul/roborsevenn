@@ -55,7 +55,7 @@ function RsEvEn_team() {
 	echo -e "\e[0m"
 	green "     >>>>                       edir 4 source                                          "
 	green "     >>>>                       beyond.bombang and...                                  "
-	white "     >>>>                       edited by ehsan mafia_boy   @RsEvEn                    "
+	white "     >>>>                       edited by MoHaMmAdRaSsOuL   @RsEvEn                    "
 	white "     >>>>                       @RsEvEn                                                "
 	red   "     >>>>                       @RsEvEn                                                "
 	red   "     >>>>                       RsEvEn_BOT                                             "
