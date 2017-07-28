@@ -1,48 +1,38 @@
------my_name_is_ehsan*#@mafia_boy
------@ENERGY_TEAM     FOR UPDATE
------لطفا پیام بالا رو پاک نکنید
- local function run(msg, matches) 
-if matches [1] =='setnerkh' then 
-if not is_admin(msg) then 
-return 'شما سودو نیستید' 
-end 
-local nerkh = matches[2] 
-redis:set('bot:nerkh',nerkh) 
-return 'متن شما با موفقیت تنظیم شد.' 
-end 
-if matches[1] == 'nerkh' or 'نرخ' then 
-if not is_mod(msg) then 
-return 
-end 
-    local hash = ('bot:nerkh') 
-    local nerkh = redis:get(hash) 
-    if not nerkh then 
-    return ' ثبت نشده' 
-    else 
-     tdcli.sendMessage(msg.chat_id_, 0, 1, nerkh, 1, 'html') 
-    end 
-    end 
-if matches[1]=="delnerkh" then 
-if not is_admin(msg) then 
-return 'شما ادمین نیستید' 
-end 
-    local hash = ('bot:nerkh') 
-    redis:del(hash) 
-return ' پاک شد' 
-end 
-end 
-return { 
-patterns ={ 
-"^[!#/](setnerkh) (.*)$", 
-"^[!#/](nerkh)$",
-"^💳$",
-"^قیمت ربات$",
-"^قیمت رباط$",
-"^نرخ$", 
-"^[!#/](delnerkh)$", 
-}, 
-run = run 
+local function pre_process(msg)
+  local hash = 'mute_time:'..msg.chat_id_
+  if redis:get(hash) and gp_type(msg.chat_id_) == 'channel' and not is_mod(msg) then
+    tdcli.deleteMessages(msg.chat_id_, {[0] = tonumber(msg.id_)})
+  end
+ end
+ 
+local function run(msg, matches)
+  if matches[1]:lower() == 'mt' and is_mod(msg) then
+     local hash = 'mute_time:'..msg.chat_id_
+     if not matches[2] then
+		return "_لطفا ساعت و دقیقه را وارد نمایید!_"
+  else
+     local hour = string.gsub(matches[2], 'h', '')
+     local num1 = tonumber(hour) * 3600
+     local minutes = string.gsub(matches[3], 'm', '')
+     local num2 = tonumber(minutes) * 60
+     local num4 = tonumber(num1 + num2)
+	 redis:setex(hash, num4, true)
+     return "⛔️گروه به مدت: \n`"..matches[2].."` ساعت\n`"..matches[3].."` دقیقه \nتعطیل میباشد.️"
+    end
+  end
+  if matches[1]:lower() == 'unmt' and is_mod(msg) then
+     local hash = 'mute_time:'..msg.chat_id_
+     redis:del(hash)
+     return "*✅گروه برای ارسال پیام کاربران باز شد.*"
+  end
+end
+return {
+   patterns = {
+      '^[/!#]([Mm][Tt])$',
+      '^[/!#]([Uu][Nn][Mm][Tt])$',
+	  '^[/!#]([Mm][Tt]) (%d+) (%d+)$',
+ },
+  run = run,
+  pre_process = pre_process
 }
------my_name_is_ehsan*#@mafia_boy
------@ENERGY_TEAM     FOR UPDATE
------لطفا پیام بالا رو پاک نکنید
+-- http://bom_bang_team
