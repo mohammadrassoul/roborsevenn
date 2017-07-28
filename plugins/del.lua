@@ -1,4 +1,4 @@
-﻿local function delmsg (i,naji)
+local function delmsg (i,naji)
     msgs = i.msgs 
     for k,v in pairs(naji.messages_) do
         msgs = msgs - 1
@@ -30,8 +30,9 @@ return {
     },
     run = run
 }
------my_name_is_ehsan*#@mafia_boy
------@ENERGY_TEAM     FOR UPDATE
+-----my_name_is_MoHaMmAdRaSsOuL*#@RsEvEn
+-----@RsEvEn     FOR UPDATE
 -----لطفا پیام بالا رو پاک نکنید
 ------منبع
 --Open By @LuaError
+
